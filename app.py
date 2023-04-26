@@ -8,8 +8,8 @@ with open('gb.pkl', 'rb') as file:
     rf = pickle.load(file)
 
 # Define a function to predict AQI
-def predict_aqi(pm2, pm10, no, no2, nox, nh3, co, so2, o3, benzene, toluene, xylene,pm_ratio, nox_ratio, co_so2, toluene_xylene):
-    input_data = np.array([[pm2, pm10, no, no2, nox, nh3, co, so2, o3, benzene, toluene, xylene,pm_ratio, nox_ratio, co_so2, toluene_xylene]])
+def predict_aqi(pm2, pm10, no, no2, nox, nh3, co, so2, o3, benzene, toluene, xylene):
+    input_data = np.array([[pm2, pm10, no, no2, nox, nh3, co, so2, o3, benzene, toluene, xylene]])
     aqi_pred = rf.predict(input_data)[0]
     if aqi_pred >= 0 and aqi_pred <= 50:
         label = "Good"
@@ -60,15 +60,11 @@ def main():
     benzene = st.slider("Benzene", min_value=0.0, max_value=1000.0, value=2.24)
     toluene = st.slider("Toluene", min_value=0.0, max_value=1000.0, value=12.07)
     xylene = st.slider("Xylene", min_value=0.0, max_value=1000.0, value=0.73)
-    pm_ratio = st.slider("PM2.5/PM10 ratio", min_value=0.0, max_value=1.0, value=0.294857)
-    nox_ratio = st.slider("NOx/NO ratio", min_value=0.0, max_value=1.0, value=0.373757)
-    co_so2 = st.slider("CO/SO2 ratio", min_value=0.0, max_value=1000.0, value=4.0185)
-    toluene_xylene = st.slider("Toluene/Xylene ratio", min_value=0.0, max_value=1000.0, value=12.80)
     
 
     # Predict AQI
     if st.button("Predict AQI"):
-        aqi_pred, label = predict_aqi(pm2, pm10, no, no2, nox, nh3, co, so2, o3, benzene, toluene, xylene, pm_ratio, nox_ratio, co_so2, toluene_xylene)
+        aqi_pred, label = predict_aqi(pm2, pm10, no, no2, nox, nh3, co, so2, o3, benzene, toluene, xylene)
         st.success(f"The predicted AQI is {round(aqi_pred)}. The air quality is {label}.")
 
     
