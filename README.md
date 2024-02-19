@@ -2,7 +2,7 @@
 
 ## Air Quality Prediction using Random Forest and Streamlit
 
-> Welcome to the Air Quality Prediction project! In this repository, we’ve developed a robust machine learning model to predict air quality based on various environmental factors. Our model utilizes features such as particulate matter (PM), nitrogen dioxide (NO2), and ozone (O3) levels to make accurate predictions. Let’s explore the details!
+Welcome to the Air Quality Prediction project! In this repository, we’ve developed a robust machine learning model to predict air quality based on various environmental factors. Our model utilizes features such as particulate matter (PM), nitrogen dioxide (NO2), and ozone (O3) levels to make accurate predictions. Let’s explore the details!
 
 > Table of Contents
 ``` Introduction
