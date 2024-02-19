@@ -18,6 +18,7 @@ Introduction
 Air quality affects our health and well-being. Predicting air quality accurately can help individuals and policymakers take necessary actions. Our goal is to create a reliable model that assesses air quality levels and provides actionable insights.
 ```
 ### Data Preprocessing
+<br>
 We followed essential data preprocessing steps:
 
 Data Cleaning: Removed duplicates, handled missing values, and corrected inconsistencies.
@@ -25,12 +26,14 @@ Feature Scaling: Ensured all features were on the same scale.
 Data Splitting: Separated the dataset into training and testing subsets.
 
 ### Feature Engineering
+<br>
 Feature engineering enhances model performance. Here’s what we did:
 
 Feature Extraction: Extracted relevant features from raw data.
 Temporal Features: Created features based on time of day, week, and month.
 Lagged Features: Included lagged values of air quality indicators.
 ### Model Building
+<br>
 We experimented with various machine learning algorithms:
 
 Linear Regression: A baseline model for comparison.
@@ -39,9 +42,11 @@ Deployment with Streamlit
 We deployed our model using Streamlit, a Python library for creating interactive web applications. Users can input environmental parameters, and our model will predict air quality levels.
 
 ### Results
+<br>
 Our Random Forest model achieved an impressive R-squared value of 0.90 on the test data. This accuracy ensures reliable predictions for real-world scenarios.
 
 ### Usage
+<br>
 Clone this repository.
 Install the necessary dependencies (e.g., pip install streamlit).
 Run the Streamlit app (streamlit run app.py).
